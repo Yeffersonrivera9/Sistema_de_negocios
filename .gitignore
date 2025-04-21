@@ -5,9 +5,6 @@ node_modules/
 .env
 .env.*
 
-# Salida de volcado de BD
-*.sql
-
 # Logs
 npm-debug.log*
 
