@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ventas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Menú hamburguesa -->
+  <div class="menu">
+    <button id="menuBtn">☰</button>
+    <div id="menuOpciones" class="menu-opciones oculto">
+      <button onclick="irAProductos()">📦 Productos</button>
+      <button onclick="irAEmpleados()">👤 Empleados</button>
+      <button onclick="irADashboard()">📊 Dashboard</button>
+      <button onclick="irAVentas()">💰 Ventas</button>
+      <button onclick="irAGastos()">💸 Gastos</button>
+      <button onclick="cerrarSesion()">🚪 Cerrar sesión</button>
+    </div>
+  </div>
+
+  <h2>Registro de Ventas</h2>
+
+  <!-- Formulario de nueva venta -->
+  <form id="formVenta">
+    <select id="id_usuario" required>
+      <option value="">Cargando vendedores…</option>
+    </select>
+
+    <div id="lineasVenta">
+      <!-- Aquí agregaremos líneas dinámicamente -->
+    </div>
+  
+    <button type="button" id="agregarLinea">+ Agregar producto</button>
+    <button type="submit">Guardar Venta</button>
+  </form>
+
+  <hr>
+
+  <h3>Historial de Ventas</h3>
+  <label>Desde: <input type="date" id="fechaInicio"></label>
+  <label>Hasta: <input type="date" id="fechaFin"></label>
+  <button id="filtrarVentas">Filtrar</button>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Venta</th><th>Empleado</th><th>Fecha</th><th>Total</th><th>Detalle</th>
+      </tr>
+    </thead>
+    <tbody id="tablaVentas"></tbody>
+  </table>
+
+  <script src="js/ventas.js"></script>
+</body>
+</html>

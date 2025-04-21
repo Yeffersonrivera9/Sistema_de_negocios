@@ -1,0 +1,302 @@
+/* ================== RESET GENERAL ================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    color: #333;
+    text-align: center;
+  }
+  
+  
+  /* ================== FORMULARIOS ================== */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="password"],
+  form input[type="email"], 
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  form textarea {                
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  form textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+
+ /* Estilo para selects e inputs dentro del form */
+#formVenta select,
+#formVenta input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Botones grandes uniformes */
+#formVenta button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+#formVenta button:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de eliminar línea (✖) */
+#formVenta button.remove-linea {
+  background-color: #dc3545;
+}
+
+#formVenta button.remove-linea:hover {
+  background-color: #b02a37;
+}
+  
+  /* ================== TABLAS ================== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  table th, table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Banner de alerta */
+#alertaStock {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  padding: 12px;
+  background-color: #f8d7da; /* rojo suave */
+  color: #721c24;            /* texto oscuro */
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Resaltar fila de stock bajo */
+.stock-bajo {
+  background-color: #fff3cd; /* amarillo suave */
+}
+
+  /* ================== BOTONES EN TABLAS ================== */
+  table button {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  table button:nth-child(1) {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  table button:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  table button:hover {
+    opacity: 0.9;
+  }
+  
+  
+  /* ================== MENÚ DESPLEGABLE ================== */
+  .menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  #menuBtn {
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .menu-opciones {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    min-width: 160px;
+  }
+  
+  .menu-opciones button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .menu-opciones button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Ocultar el menú por defecto */
+  .oculto {
+    display: none;
+  }
+
+  .reportes-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .report-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+  
+  .dropdown-content button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .dropdown-content button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Clase que muestra el dropdown */
+  .dropdown-content.show {
+    display: flex;
+  }  
+  
+  .texto-secundario {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .texto-secundario a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .texto-secundario a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+ 
+
+
+  
+  

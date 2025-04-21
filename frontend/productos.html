@@ -1,0 +1,64 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Menú hamburguesa -->
+  <div class="menu">
+    <button id="menuBtn">☰</button>
+    <div id="menuOpciones" class="menu-opciones oculto">
+      <button onclick="irAProductos()">📦 Productos</button>
+      <button onclick="irAEmpleados()">👤 Empleados</button>
+      <button onclick="irADashboard()">📊 Dashboard</button>
+      <button onclick="irAVentas()">💰 Ventas</button>
+      <button onclick="irAGastos()">💸 Gastos</button>
+      <button onclick="cerrarSesion()">🚪 Cerrar sesión</button>
+    </div>
+  </div>
+
+  <h2>Listado de Productos</h2>
+
+  <h3 id="tituloFormulario">Agregar nuevo producto</h3>
+  <form id="formAgregarProducto">
+    <input type="hidden" id="id_producto">
+
+    <input type="text" id="nombre" placeholder="Nombre del producto" required>
+    <textarea id="descripcion" placeholder="Descripción" required></textarea>
+    <input type="text" id="categoria" placeholder="Categoría" required>
+    <input type="number" id="precio_unitario" placeholder="Precio unitario" required>
+    <input type="number" id="stock" placeholder="Stock inicial" required>
+    <input type="number" id="stock_minimo" placeholder="Stock mínimo" required>
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <hr>
+  <div id="alertaStock"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Categoría</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Stock Mínimo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaProductos">
+      <!-- se llenará por JS -->
+    </tbody>
+  </table>
+
+  <script src="js/productos.js"></script>
+</body>
+</html>
+
+
+

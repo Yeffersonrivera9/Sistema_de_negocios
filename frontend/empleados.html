@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Menú desplegable -->
+  <div class="menu">
+    <button id="menuBtn">☰</button>
+    <div id="menuOpciones" class="menu-opciones oculto">
+      <button onclick="irAProductos()">📦 Productos</button>
+      <button onclick="irAEmpleados()">👤 Empleados</button>
+      <button onclick="irADashboard()">📊 Dashboard</button>   
+      <button onclick="irAVentas()">💰 Ventas</button>
+      <button onclick="irAGastos()">💸 Gastos</button>
+      <button onclick="cerrarSesion()">🚪 Cerrar sesión</button>
+    </div>
+  </div>
+
+ 
+<h2>Gestión de Empleados</h2>
+
+<h3 id="tituloFormulario">Agregar nuevo empleado</h3>
+<form id="formEmpleados">
+  <input type="hidden" id="id_usuario">
+  <input type="text" id="nombre" placeholder="Nombre" required>
+  <input type="email" id="correo" placeholder="Correo" required>
+  <select id="rol">
+    <option value="empleado">Empleado</option>
+    <option value="admin">Administrador</option>
+  </select>
+  <input type="password" id="contraseña" placeholder="Contraseña" required>
+  <button type="submit">Guardar</button>
+</form>
+
+<table>
+  <thead>
+    <tr><th>ID</th><th>Nombre</th><th>Correo</th><th>Rol</th><th>Fecha</th><th>Acciones</th></tr>
+  </thead>
+  <tbody id="tablaEmpleados"></tbody>
+</table>
+<script src="js/empleados.js"></script>
+
+</body>
+</html>

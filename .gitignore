@@ -1,0 +1,15 @@
+# Dependencias de Node
+node_modules/
+
+# Variables de entorno
+.env
+.env.*
+
+# Salida de volcado de BD
+*.sql
+
+# Logs
+npm-debug.log*
+
+# Archivos temporales del SO
+.DS_Store

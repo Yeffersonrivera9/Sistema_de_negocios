@@ -1,0 +1,25 @@
+<!-- frontend/register.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h2>Crear cuenta</h2>
+  <form id="formRegister">
+    <input type="text" id="empresa_nombre" placeholder="Nombre de la empresa" required>
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="email" id="correo" placeholder="Correo electrónico" required>
+    <input type="password" id="contraseña" placeholder="Contraseña" required>
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <p class="texto-secundario">
+    ¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>
+  </p>
+
+  <script src="js/registro.js"></script>
+</body>
+</html>

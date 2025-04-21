@@ -1,0 +1,76 @@
+<!-- frontend/dashboard.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Chart.js desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Menú desplegable -->
+  <div class="menu">
+    <button id="menuBtn">☰</button>
+    <div id="menuOpciones" class="menu-opciones oculto">
+      <button onclick="irAProductos()">📦 Productos</button>
+      <button onclick="irAEmpleados()">👤 Empleados</button>
+      <button onclick="irADashboard()">📊 Dashboard</button>  
+      <button onclick="irAVentas()">💰 Ventas</button>
+      <button onclick="irAGastos()">💸 Gastos</button>  
+      <button onclick="cerrarSesion()">🚪 Cerrar sesión</button>
+    </div>
+  </div>
+
+  <h2>Dashboard</h2>
+
+  <!-- Gráfica: Empleados por mes -->
+  <h3>Empleados registrados por mes</h3>
+  <canvas id="chartUsuariosPorMes"></canvas>
+
+  <!-- Ventas por mes -->
+  <h3>Ventas totales por mes</h3>
+  <canvas id="chartVentasPorMes"></canvas>
+
+  <h3>Ingresos vs Egresos por mes</h3>
+  <canvas id="chartIngresosEgresos"></canvas>
+
+  <h3>Productos más vendidos</h3>
+  <canvas id="chartProductosMasVendidos"></canvas>
+
+  <hr>
+
+  <hr>
+  <h3>Descargar Reportes</h3>
+<div class="reportes-buttons">
+
+  <div class="dropdown">
+    <button class="report-btn">📦 Inventario ▾</button>
+    <div class="dropdown-content">
+      <button onclick="descargarReporte('inventario','excel')">Excel</button>
+      <button onclick="descargarReporte('inventario','pdf')">PDF</button>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="report-btn">💰 Ventas ▾</button>
+    <div class="dropdown-content">
+      <button onclick="descargarReporte('ventas','excel')">Excel</button>
+      <button onclick="descargarReporte('ventas','pdf')">PDF</button>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="report-btn">💸 Gastos ▾</button>
+    <div class="dropdown-content">
+      <button onclick="descargarReporte('gastos','excel')">Excel</button>
+      <button onclick="descargarReporte('gastos','pdf')">PDF</button>
+    </div>
+  </div>
+
+</div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
